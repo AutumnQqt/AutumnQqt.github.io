@@ -6,7 +6,15 @@
   <title>冬天吃橘子 › git入门--常用命令</title>
   <meta name="author" content="Autumn">
   
-  <meta name="description" content="git initgit addgit commit -v">
+  <meta name="description" content="git入门–常用命令
+git init
+git init 的作用是初始化本地仓库 .git
+执行git init 前后分别执行ls -a命令查看文件，可以发现多了一个.git目录，这就是我们初始化的一个本地仓库 
+
+
+git add  将文件添加到 暂存区
+
+当本地仓库文件发生变动时，如果想让改动保">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -71,7 +79,23 @@
     </header>
     <div class="entry">
       
-        <p>git init<br>git add<br>git commit -v</p>
+        <h1 id="git入门–常用命令"><a href="#git入门–常用命令" class="headerlink" title="git入门–常用命令"></a>git入门–常用命令</h1><ol>
+<li>git init<ul>
+<li>git init 的作用是初始化本地仓库 .git<br><img src="https://github.com/AutumnQqt/blog-generator/blob/master/imgs/002.png?raw=true" alt="blockchain" title="git init"></li>
+<li>执行git init 前后分别执行ls -a命令查看文件，可以发现多了一个.git目录，这就是我们初始化的一个本地仓库 </li>
+</ul>
+</li>
+<li><p>git add  将文件添加到 <strong>暂存区</strong></p>
+<ul>
+<li>当本地仓库文件发生变动时，如果想让改动保存到仓库里，需要先 git add 文件名 或者 git add .（保存当前目录下的所有变动）<br><img src="https://github.com/AutumnQqt/blog-generator/blob/master/imgs/003.png?raw=true" alt="blockchain" title="git add"></li>
+</ul>
+</li>
+<li><p>git commit -m “改动信息”  </p>
+<ul>
+<li>正式提交变动，将暂存区的变动提交至 .git 仓库<br><img src="https://github.com/AutumnQqt/blog-generator/blob/master/imgs/003.png?raw=true" alt="blockchain" title="git commit"></li>
+</ul>
+</li>
+</ol>
 
       
     </div>
