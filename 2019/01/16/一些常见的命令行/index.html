@@ -27,10 +27,6 @@ pwd
 显示当前目录
 
 
-–
-–     
-
-
 ls 路径
 查看路径（路径里有哪些文件）
 
@@ -40,7 +36,7 @@ ls -a 路径
 
 
 ls -l 路径
-查看路径里文">
+查看路径里文件详细信息（日期、大小">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -108,96 +104,66 @@ ls -l 路径
         <h1 id="一些常见的命令行"><a href="#一些常见的命令行" class="headerlink" title="一些常见的命令行"></a>一些常见的<strong>命令行</strong></h1><h2 id="常见的自带命令"><a href="#常见的自带命令" class="headerlink" title="- 常见的自带命令"></a>- 常见的自带命令</h2><table>
 <thead>
 <tr>
-<th style="text-align:center">命令</th>
-<th style="text-align:center">含义</th>
+<th style="text-align:left"><strong>命令</strong></th>
+<th style="text-align:left"><strong>含义</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center">cd 目录名</td>
-<td style="text-align:center">进入目录</td>
+<td style="text-align:left">cd 目录名</td>
+<td style="text-align:left">进入目录</td>
 </tr>
 <tr>
-<td style="text-align:center">mkdir 目录名</td>
-<td style="text-align:center">创建目录</td>
+<td style="text-align:left">mkdir 目录名</td>
+<td style="text-align:left">创建目录</td>
 </tr>
 <tr>
-<td style="text-align:center">pwd</td>
-<td style="text-align:center">显示当前目录</td>
+<td style="text-align:left">pwd</td>
+<td style="text-align:left">显示当前目录</td>
 </tr>
 <tr>
-<td style="text-align:center">–</td>
-<td style="text-align:center">–     </td>
+<td style="text-align:left">ls 路径</td>
+<td style="text-align:left">查看路径（路径里有哪些文件）</td>
 </tr>
 <tr>
-<td style="text-align:center">ls 路径</td>
-<td style="text-align:center">查看路径（路径里有哪些文件）</td>
+<td style="text-align:left">ls -a 路径</td>
+<td style="text-align:left">查看路径（包含以.开头的文件）</td>
 </tr>
 <tr>
-<td style="text-align:center">ls -a 路径</td>
-<td style="text-align:center">查看路径（包含以.开头的文件）</td>
+<td style="text-align:left">ls -l 路径</td>
+<td style="text-align:left">查看路径里文件详细信息（日期、大小等）</td>
 </tr>
 <tr>
-<td style="text-align:center">ls -l 路径</td>
-<td style="text-align:center">查看路径里文件详细信息（日期、大小等）</td>
+<td style="text-align:left">ls -la 路径</td>
+<td style="text-align:left">ls -a 和ls -l功能相加</td>
 </tr>
 <tr>
-<td style="text-align:center">ls -la 路径</td>
-<td style="text-align:center">ls -a 和ls -l功能相加</td>
+<td style="text-align:left">touch 文件名</td>
+<td style="text-align:left">创建文件</td>
 </tr>
 <tr>
-<td style="text-align:center">touch 文件名</td>
-<td style="text-align:center">创建文件</td>
+<td style="text-align:left">echo ‘文件名’ &gt; 路径</td>
+<td style="text-align:left">创建文件</td>
 </tr>
 <tr>
-<td style="text-align:center">echo ‘文件名’ &gt; 路径</td>
-<td style="text-align:center">创建文件</td>
+<td style="text-align:left">mv 源文件 新文件</td>
+<td style="text-align:left">移动文件</td>
 </tr>
 <tr>
-<td style="text-align:center">mv 源文件 新文件</td>
-<td style="text-align:center">移动文件</td>
+<td style="text-align:left">rm 文件</td>
+<td style="text-align:left">删除文件</td>
 </tr>
 <tr>
-<td style="text-align:center">rm 文件</td>
-<td style="text-align:center">删除文件</td>
+<td style="text-align:left">tree</td>
+<td style="text-align:left">查看目录结构</td>
 </tr>
 <tr>
-<td style="text-align:center">tree</td>
-<td style="text-align:center">查看目录结构</td>
-</tr>
-<tr>
-<td style="text-align:center">cat 文件</td>
-<td style="text-align:center">查看文件</td>
+<td style="text-align:left">cat 文件</td>
+<td style="text-align:left">查看文件</td>
 </tr>
 </tbody>
 </table>
-<table>
-<thead>
-<tr>
-<th>姓名</th>
-<th style="text-align:center">技能</th>
-<th style="text-align:right">排行</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>刘备</td>
-<td style="text-align:center">哭</td>
-<td style="text-align:right">大哥</td>
-</tr>
-<tr>
-<td>关羽</td>
-<td style="text-align:center">打</td>
-<td style="text-align:right">二哥</td>
-</tr>
-<tr>
-<td>张飞</td>
-<td style="text-align:center">骂</td>
-<td style="text-align:right">三弟</td>
-</tr>
-</tbody>
-</table>
-<h2 id="explainshell-com的用法"><a href="#explainshell-com的用法" class="headerlink" title="- explainshell.com的用法"></a>- <a href="https://explainshell.com/" target="_blank">explainshell.com</a>的用法</h2><p>对于常见的命令行我们很容易能记住他们的用法，但是对于一些没有掌握的命令行，我们可以通过<a href="https://explainshell.com/" target="_blank">explainshell.com</a>这个网站来查询，下面是网站的用法：\br<br><img src="http://www.pptbz.com/pptpic/UploadFiles_6909/201211/2012111719294197.jpg" alt="blockchain" title="区块链"></p>
+<h2 id="explainshell-com的用法"><a href="#explainshell-com的用法" class="headerlink" title="- explainshell.com的用法"></a>- <a href="https://explainshell.com/" target="_blank">explainshell.com</a>的用法</h2><p>对于常见的命令行我们很容易能记住他们的用法，但是对于一些没有掌握的命令行，我们可以通过<a href="https://explainshell.com/" target="_blank"><strong>explainshell.com</strong></a>这个网站来查询，下面是网站的用法：<br><img src="https://github.com/AutumnQqt/blog-generator/blob/master/imgs/001.png?raw=true" alt="blockchain" title="命令行查询"></p>
 
       
     </div>
