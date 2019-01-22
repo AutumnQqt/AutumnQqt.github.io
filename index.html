@@ -78,28 +78,58 @@
 </ul>
 <h3 id="HTTP-请求"><a href="#HTTP-请求" class="headerlink" title="HTTP 请求"></a>HTTP 请求</h3><p>客户端（Client）通过发送HTTP请求向服务器（Server）的80端口请求资源访问</p>
 <h4 id="HTTP请求最多包含四部分，最少包含三部分，他的格式是："><a href="#HTTP请求最多包含四部分，最少包含三部分，他的格式是：" class="headerlink" title="HTTP请求最多包含四部分，最少包含三部分，他的格式是："></a>HTTP请求最多包含四部分，最少包含三部分，他的格式是：</h4><ol>
-<li><p><strong>动词 路径 协议/版本</strong>\n<br>动词有 GET POST PUT PATCH DELETE HEAD OPTIONS 等<br>路径以“\”开头，不写默认为“\”<br><strong>动词</strong>|<strong>作用</strong><br>:—|:—<br>GET|向服务器获取资源<br>POST|向服务器发送请求，要求服务器接收附在请求后面的数据<br>PUT|整体更新<br>PATCH|局部更新</p>
-</li>
-<li><p><strong>Key: value</strong> ( 第二部分可以有很多组 key:value)</p>
-</li>
+<li><strong>动词 路径 协议/版本</strong><br>动词有 GET POST PUT PATCH DELETE HEAD OPTIONS 等<br>路径以“\”开头，不写默认为“\”</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th style="text-align:left"><strong>动词</strong></th>
+<th style="text-align:left"><strong>作用</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">   GET</td>
+<td style="text-align:left">向服务器获取资源</td>
+</tr>
+<tr>
+<td style="text-align:left">   POST</td>
+<td style="text-align:left">向服务器发送请求，要求服务器接收附在请求后面的数据</td>
+</tr>
+<tr>
+<td style="text-align:left">   PUT</td>
+<td style="text-align:left">整体更新</td>
+</tr>
+<tr>
+<td style="text-align:left">   PATCH</td>
+<td style="text-align:left">局部更新</td>
+</tr>
+</tbody>
+</table>
+<ol start="2">
+<li><strong>Key: value</strong> ( 第二部分可以有很多组 key:value)</li>
 <li>（第三部分是一个回车，用来分隔第二与底四部分）</li>
-<li><strong>要上传的数据</strong><br>\n</li>
+<li><strong>要上传的数据</strong></li>
 </ol>
 <h3 id="HTTP-响应"><a href="#HTTP-响应" class="headerlink" title="HTTP 响应"></a>HTTP 响应</h3><p>客户端向服务器发送请求后，服务器随之发出响应</p>
 <h4 id="响应的格式如下"><a href="#响应的格式如下" class="headerlink" title="响应的格式如下"></a>响应的格式如下</h4><ol>
-<li><strong>协议/版本号 状态码 状态解释</strong><br>状态代码由三位数字组成，表示请求是否被理解或被满足，状态描述给出了关于状态代码的简短文本描述<br>1xx：指示信息——表示请求已经接受，继续处理<br>2xx：成功——表示请求已经被成功接收、理解、接受。<br>3xx：重定向——要完成请求必须进行更进一步的操作<br>4xx：客户端错误——请求有语法错误或请求无法实现<br>5xx：服务器端错误——服务器未能实现合法的请求。<br>常见状态代码、状态描述、说明：<br>200 OK      //客户端请求成功<br>400 Bad Request  //客户端请求有语法错误，不能被服务器所理解<br>401 Unauthorized //请求未经授权，这个状态代码必须和WWW-Authenticate报头域一起使用<br>403 Forbidden  //服务器收到请求，但是拒绝提供服务<br>404 Not Found  //请求资源不存在，eg：输入了错误的URL<br>500 Internal Server Error //服务器发生不可预期的错误<br>503 Server Unavailable  //服务器当前不能处理客户端的请求，一段时间后可能恢复正常</li>
+<li><p><strong>协议/版本号 状态码 状态解释</strong><br><strong>状态代码由三位数字组成，表示请求是否被理解或被满足，状态描述给出了关于状态代码的简短文本描述</strong></p>
+<p>1xx：指示信息——表示请求已经接受，继续处理<br>2xx：成功——表示请求已经被成功接收、理解、接受。<br>3xx：重定向——要完成请求必须进行更进一步的操作<br>4xx：客户端错误——请求有语法错误或请求无法实现<br>5xx：服务器端错误——服务器未能实现合法的请求。</p>
+<p><strong>常见状态代码、状态描述、说明：</strong></p>
+<p>200 OK      //客户端请求成功<br>400 Bad Request  //客户端请求有语法错误，不能被服务器所理解<br>401 Unauthorized //请求未经授权，这个状态代码必须和WWW-Authenticate报头域一起使用<br>403 Forbidden  //服务器收到请求，但是拒绝提供服务<br>404 Not Found  //请求资源不存在，eg：输入了错误的URL<br>500 Internal Server Error //服务器发生不可预期的错误<br>503 Server Unavailable  //服务器当前不能处理客户端的请求，一段时间后可能恢复正常</p>
+</li>
 <li><strong>Key: value</strong> ( 第二部分可以有很多组 key:value)</li>
 <li>（第三部分是一个回车，用来分隔第二与底四部分）</li>
-<li><strong>要下载的内容</strong><br>\n</li>
+<li><strong>要下载的内容</strong></li>
 </ol>
 <h3 id="用Chrome开发者工具查看-HTTP-请求与响应内容"><a href="#用Chrome开发者工具查看-HTTP-请求与响应内容" class="headerlink" title="用Chrome开发者工具查看 HTTP 请求与响应内容"></a>用Chrome开发者工具查看 HTTP 请求与响应内容</h3><p>下面以 <a href="https://www.baidu.com/" target="_blank">https://www.baidu.com/</a> 为例</p>
 <ul>
 <li>右键检查打开开发者工具</li>
 <li>在Network可以查看请求与响应的内容</li>
 <li>刷新页面</li>
-<li>点击<a href="http://www.baidu.com，在右侧就可以看到请求https://www.baidu.com/" target="_blank" rel="noopener">www.baidu.com，在右侧就可以看到请求https://www.baidu.com/</a> 的请求与响应内容，如图/n<br><img src="https://github.com/AutumnQqt/blog-generator/blob/master/imgs/005.png?raw=true" alt="blockchain" title="HTTP 请求与响应"><br>HTTP请求如图：<br>(<a href="https://github.com/AutumnQqt/blog-generator/blob/master/imgs/006.png?raw=true" target="_blank" rel="noopener">https://github.com/AutumnQqt/blog-generator/blob/master/imgs/006.png?raw=true</a> “HTTP 请求与响应”)<br>HTTP响应如图：<br>(<a href="https://github.com/AutumnQqt/blog-generator/blob/master/imgs/007.png?raw=true" target="_blank" rel="noopener">https://github.com/AutumnQqt/blog-generator/blob/master/imgs/007.png?raw=true</a> “HTTP 请求与响应”)</li>
+<li>点击<a href="http://www.baidu.com，在右侧就可以看到请求" target="_blank" rel="noopener">www.baidu.com，在右侧就可以看到请求</a><a href="https://www.baidu.com/" target="_blank">https://www.baidu.com/</a> 的请求与响应内容，如图/n<br><img src="https://github.com/AutumnQqt/blog-generator/blob/master/imgs/005.png?raw=true" alt="blockchain" title="HTTP 请求与响应"><br>HTTP请求如图：<br><img src="https://github.com/AutumnQqt/blog-generator/blob/master/imgs/006.png?raw=true" alt="blockchain" title="HTTP 请求与响应"><br>HTTP响应如图：<br><img src="https://github.com/AutumnQqt/blog-generator/blob/master/imgs/007.png?raw=true" alt="blockchain" title="HTTP 请求与响应"></li>
 </ul>
-<h3 id="如何使用-curl-命令"><a href="#如何使用-curl-命令" class="headerlink" title="如何使用 curl 命令"></a>如何使用 curl 命令</h3><p>除了使用Chrome以及其他浏览器查看HTTP请求和响应之外，我们还可以通过命令行查看HTTP请求和响应，用到的就是<strong>curl命令</strong>，同样以 <a href="https://www.baidu.com/" target="_blank">https://www.baidu.com/</a> 为例<br>curl是一个功能强大的网络工具，它能够通过http、ftp等方式下载文件，也能够上传文件，这里只列出查看请求与响应的参数：<br>在命令行中输入<strong>curl -X POST -s -v -H – “<a href="https://www.baidu.com&quot;" target="_blank" rel="noopener">https://www.baidu.com&quot;</a></strong>回车<br>其中以“&gt;”开头的语句便是请求的内容<br><img src="https://github.com/AutumnQqt/blog-generator/blob/master/imgs/008.png?raw=true" alt="blockchain" title="Curl查看请求与响应"><br>以“&lt;”开头的语句便是响应的内容<br>(<a href="https://github.com/AutumnQqt/blog-generator/blob/master/imgs/009.png?raw=true" target="_blank" rel="noopener">https://github.com/AutumnQqt/blog-generator/blob/master/imgs/009.png?raw=true</a> “Curl查看请求与响应”)</p>
+<h3 id="如何使用-curl-命令"><a href="#如何使用-curl-命令" class="headerlink" title="如何使用 curl 命令"></a>如何使用 curl 命令</h3><p>除了使用Chrome以及其他浏览器查看HTTP请求和响应之外，我们还可以通过命令行查看HTTP请求和响应，用到的就是<strong>curl命令</strong>，同样以 <a href="https://www.baidu.com/" target="_blank">https://www.baidu.com/</a> 为例<br>curl是一个功能强大的网络工具，它能够通过http、ftp等方式下载文件，也能够上传文件，这里只列出查看请求与响应的参数：<br>在命令行中输入<strong>curl -X POST -s -v -H – “<a href="https://www.baidu.com&quot;" target="_blank" rel="noopener">https://www.baidu.com&quot;</a></strong>回车<br>其中以“&gt;”开头的语句便是请求的内容<br><img src="https://github.com/AutumnQqt/blog-generator/blob/master/imgs/008.png?raw=true" alt="blockchain" title="Curl查看请求与响应"><br>以“&lt;”开头的语句便是响应的内容<br><img src="https://github.com/AutumnQqt/blog-generator/blob/master/imgs/009.png?raw=true" alt="blockchain" title="Curl查看请求与响应"></p>
 <p>-s/–slient 减少输出的信息，比如进度<br>-verbose 小写的v参数，用于打印更多信息，包括发送的请求信息，这在调试脚本是特别有用<br>-H/–header 指定请求头参数</p>
 
       
